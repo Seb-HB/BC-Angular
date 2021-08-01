@@ -1,0 +1,59 @@
+
+header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    .reduce{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav{
+        width: 50%;
+        line-height: 40px;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                display: inline-block;
+                &:hover{
+                    #sousmenu{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Logo {
+    position: absolute;
+    top:5px;
+    left:5px;
+}
+
+#InfoBar {
+    background-color: #088038;
+    height: 30px;
+    .reduce{
+        height: 100%;
+        div{
+            display: flex;
+            img, span{
+                margin-right: 5px;
+            }
+        }
+    }
+
+}
+
+#Navbar {
+    background-color: rgba(11,10,10,0.7);
+    height: 40px;
+    .reduce{
+        height:40px
+    }
+}

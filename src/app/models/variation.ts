@@ -1,3 +1,4 @@
+import { Category } from "./category";
 import { Product } from "./product";
 
 export class Variation extends Product{
@@ -10,8 +11,8 @@ export class Variation extends Product{
     private additionalDescription: string;
 
     constructor(productName:string, brand:string,
-        supplierRef: string, stock:number, priceHT:number, additionalDescription:string='', color: string='', size: string='',  variationImg: string) {
-        super()
+        supplierRef: string, stock:number, priceHT:number, additionalDescription:string='', color: string='', size: string='',  variationImg: string, ...categories:Category[]) {
+        super(productName, brand, ...categories);
         this.supplierRef = supplierRef;
         this.stock = stock;
         this.priceHT = priceHT;
