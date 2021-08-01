@@ -1,18 +1,24 @@
-export class Variation{
-    private supplierRef: string;
-    private color: string;
-    private size: string;
-    private stock:number;
-    private variationImg: string;
-    private priceHT:number;
+import { Product } from "./product";
 
-    constructor(supplierRef: string, color: string, size: string, stock:number, variationImg: string, priceHT:number) {
+export class Variation extends Product{
+    private supplierRef: string;
+    private stock:number;
+    private priceHT:number;
+    private variationImg: string;
+    private color: string|undefined;
+    private size: string|undefined;
+    private additionalDescription: string;
+
+    constructor(productName:string, brand:string,
+        supplierRef: string, stock:number, priceHT:number, additionalDescription:string='', color: string='', size: string='',  variationImg: string) {
+        super()
         this.supplierRef = supplierRef;
+        this.stock = stock;
+        this.priceHT = priceHT;
+        this.additionalDescription= additionalDescription;
         this.color = color;
         this.size = size;
-        this.stock = stock;
         this.variationImg= variationImg;
-        this.priceHT = priceHT;
     }
 
 
