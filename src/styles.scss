@@ -1,88 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
-
-
-/****************************************************************
-COLORS
-********************************************************/
-$green :#088038;
-$section-bg:#DEDBD5;
-$head-gold:#C09A54;
-$btn-gold:#E2BF83;
-$btn-gold-gradient:#F4DDA8;
-$trans-black:rgba(11,10,10,0.7);
-$white: white;
-$font-color: black;
-$section-margin:6rem;
-
-
-/****************************************************************
-FONTS
-*******************************************************************/
-$exo:'Exo 2', sans-serif;
-$roboto: 'Roboto', sans-serif;
-
-
-
-
-
-/***************************************************************
-                RESET
-***************************************************************/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-
-/****************************************************************
-                    TEXT-FORMAT
-****************************************************************/
-body{
-    font-family: $exo;
-    color: $font-color;
-    text-align: center;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-h2{
-    font-size:48Px;
-    margin-bottom: 2rem;
-    color: $head-gold;
-}
-h3{
-    //font-family: $roboto;
-    font-size: 26px;
-    margin: bottom 1rem;
-}
-
-p{
-    font-family: $roboto;
-    text-align:justify;
-    font-size:20px;
-}
-
-.bg-grey h2{
-    color: inherit;
-}
-
-.align-left{
-    text-align: left;
-}
-.align-right{
-    text-align: right;
-}
-
-.flex-right{
-    justify-content: flex-end;
-}
-.flex-center{
-    justify-content: center;
-}
-
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "src/styles/reboot";
+@import "/src/styles/var";
+@import "/src/styles/text-format";
 
 
 
@@ -341,4 +262,41 @@ to{
 }
 .btn-gold{
     background:  linear-gradient($btn-gold, $btn-gold-gradient, $btn-gold);   
+}
+
+
+
+
+
+
+/*******************************************************
+                INDEX
+*****************************************************/
+
+#FirstCat{
+    top: -216px;
+    right: 0;
+}
+#SecondCat{
+    bottom: -80px;
+    left: -5px;
+}
+#fusee{
+    left: 0%;
+    top: 33px;
+}#dogs{
+    top: -224px;
+    left: 19%;
+}
+
+#avis>:nth-child(2){
+    margin: 2rem auto;
+}
+#avis div div{
+    margin-bottom: 3rem;
+}
+
+footer{
+    background-image: url('assets/footer.png');
+    min-height: 427px;
 }
